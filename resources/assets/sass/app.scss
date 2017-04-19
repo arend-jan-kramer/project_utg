@@ -4,10 +4,15 @@
 
 // Variables
 @import "variables";
-@import "base/menu";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // template
 @import "template/develop";
+
+// base
+@import "base/body";
+@import "base/default";
+@import "base/menu";
+@import "base/footer";

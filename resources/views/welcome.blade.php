@@ -1,5 +1,5 @@
 @extends('base')
 
 @section('body')
-<div class="wrapper">hoi</div>
+hoi
 @endsection

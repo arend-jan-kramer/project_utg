@@ -9,16 +9,26 @@
 
         <!-- Style -->
         <link href="{{asset('css/app.css')}}" type="text/css" rel="stylesheet">
-
+        
+        <script>
+            window.Laravel = {!! json_encode([
+                'csrfToken' => csrf_token(),
+            ]) !!};
+        </script>
     </head>
     <body>
+
     @include('include/header')
     
-    @include('include/sidebarLeft')
+    <div id="content">
 
+        @include('include/sidebarLeft')
+        
         @yield('body')
 
-    @include('include/sidebarRight')
+        @include('include/sidebarRight')
+
+    </div>
     
     @include('include/footer')
 

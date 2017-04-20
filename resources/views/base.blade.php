@@ -4,23 +4,19 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Up to Go</title>
 
         <!-- Style -->
         <link href="{{asset('css/app.css')}}" type="text/css" rel="stylesheet">
         
-        <script>
-            window.Laravel = {!! json_encode([
-                'csrfToken' => csrf_token(),
-            ]) !!};
-        </script>
     </head>
     <body>
 
     @include('include/header')
     
-    <div id="content">
+    <article>
 
         @include('include/sidebarLeft')
         
@@ -28,13 +24,15 @@
 
         @include('include/sidebarRight')
 
-    </div>
+    </article>
     
     @include('include/footer')
 
     @include('include/notification')
 
     @include('include/modal')
+
+    <div id="app"></div>
 
     <!-- script -->
     <script src="{{asset('js/app.js')}}" type="text/javascript"></script>

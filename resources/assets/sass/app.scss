@@ -6,13 +6,10 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // template
 @import "template/develop";
 
 // base
-@import "base/body";
-@import "base/default";
-@import "base/menu";
-@import "base/footer";
+@import "base";

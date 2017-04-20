@@ -1,1 +1,1 @@
-<div id="footer">&copy;</div>
+<footer><div class="max-width">&copy;</div></footer>

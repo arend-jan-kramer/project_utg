@@ -9,25 +9,21 @@
         <title>Up to Go</title>
 
         <!-- Style -->
-        <link href="{{asset('css/app.css')}}" type="text/css" rel="stylesheet">
+        <link href="{{mix('css/app.css')}}" type="text/css" rel="stylesheet">
         
     </head>
     <body>
 
     @include('include/header')
-    
-    <article>
 
-        @include('include/sidebarLeft')
+    @include('include/sidebarLeft')
         
-        @yield('body')
+    @yield('body')
 
-        @include('include/sidebarRight')
-
-    </article>
+    @include('include/sidebarRight')
     
     @include('include/footer')
-
+    
     @include('include/notification')
 
     @include('include/modal')
@@ -35,6 +31,6 @@
     <div id="app"></div>
 
     <!-- script -->
-    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+    <script src="{{mix('js/app.js')}}" type="text/javascript"></script>
     </body>
 </html>

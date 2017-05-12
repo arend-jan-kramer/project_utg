@@ -3,6 +3,9 @@
 $body-bg: #f5f8fa;
 $body-bg-smoke: #e0e0e0;
 
+// modal
+$modal-bg: #454545;
+
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
 $list-group-border: $laravel-border-color;
@@ -40,3 +43,14 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+// thema
+$thema-developer: rgb(0,0,285);
+$thema-tekstschrijver: rgb(0,14,30);
+$thema-designer: rgb(255,0,190);
+$thema-klant-bezoeker: rgb(139,69,19);
+$thema-advocaat: rgb(33,33,33);
+$thema-financieel: rgb(250,100,0);
+$thema-verkoop: rgb(255,0,39);
+$thema-boekhouder: rgb(0, 160, 210);
+$thema-vertaler: rgb(78,72,144);

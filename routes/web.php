@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('image-svg', function () {
+    return view('svg');
+});
+
+
+Route::get('kleuren', function () {
+    return view('kleuren');
+});

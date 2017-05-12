@@ -23,29 +23,68 @@ nav.inline {
 nav {
 	width: 100%;
 	background: $navbar-default-bg;
-	height: 5vh;
 }
 
 body {
 	background: $body-bg-smoke;
 }
 
-article {
-	height: 90vh;
-}
-
 footer {
 	width: 100%;
-	background: rgba($footer-bg, 0.5);
-	height: 5vh;
+	background: $navbar-default-bg;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
 }
 
 #notification {
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	left: 0;
 }
 
+#modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 5%;
+	&.modal {
+		background: rgba($modal-bg, 0.6);
+		> div {
+			display: block;
+			background: #FFF;
+		}
+		.modal-header {
+			width: 100%;
+			background: $navbar-default-bg;
+			padding: 15px;
+			text-align: right;
+			.close {
+				color: #FFF;
+				background: #FF6000;
+				border-radius: 50%;
+				padding: 5px;
+				display: inline-block;
+				cursor: pointer;
+				text-align: center;
+			}
+		}
+		#container {
+			height: calc(100% - 40px);
+			padding: 15px;
+			overflow-y: auto;
+		}
+		.modal-footer {
+			width: 100%;
+			min-height: 20px;
+			background: $navbar-default-bg;
+		}
+	}
+}
 .full-width {
 	max-width: none;
 }
@@ -55,34 +94,44 @@ footer {
 	margin: 0 auto;
 }
 
-svg {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	margin: auto;
+.developer,
+.tekstschrijver,
+.designer,
+.klant-bezoeker,
+.advocaat,
+.financieel,
+.verkoop,
+.boekhouder,
+.vertaler {
+	display: inline-block;
+	color: #FFF;
+	padding: 50px 50px;
 }
 
-.square {
-	stroke-dasharray: 540;
-	stroke-dashoffset: -540;
-	animation: draw-square 3s infinite alternate linear;
-	transform-origin: 50% 50%;
-	stroke: red;
+.developer {
+	background: $thema-developer
 }
-
-@keyframes draw-square {
-	0% {
-		stroke-dashoffset: -540;
-		transform: rotate(0deg);
-	}
-	50% {
-		stroke: purple;
-	}
-	100% {
-		stroke-dashoffset: 0;
-		transform: rotate(360deg);
-		stroke: blue;
-	}
+.tekstschrijver {
+	background: $thema-tekstschrijver;
+}
+.designer {
+	background: $thema-designer;
+}
+.klant-bezoeker {
+	background: $thema-klant-bezoeker;
+}
+.advocaat {
+	background: $thema-advocaat;
+}
+.financieel {
+	background: $thema-financieel;
+}
+.verkoop {
+	background: $thema-verkoop;
+}
+.boekhouder {
+	background: $thema-boekhouder;
+}
+.vertaler {
+	background: $thema-vertaler;
 }

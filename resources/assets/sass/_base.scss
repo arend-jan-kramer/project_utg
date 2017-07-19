@@ -9,33 +9,74 @@ ul {
 }
 
 nav.inline {
+	z-index: 1;
 	ul {
-		li{
-			display: inline;
+		li {
+			text-transform: capitalize;
+			display: inline-flex;
 			a {
 				text-decoration: none;
 				color: #FFF;
+				padding: 10px 25px;
+				&:hover {
+					color: #666;
+					background: #353535;
+				}
+			}
+			ul{
+				&.submenu {
+					display: none;
+					position: absolute;
+					top: 38px;
+				}
+			}
+			&:hover {
+				.submenu {
+					padding: 5px 0;
+					display: block;
+					background: rgba(#454545, 0.9);
+					li, a {
+						display: block;
+						&:hover {
+							background: #454545;
+						}
+					}
+				}
 			}
 		}
 	}
 }
 
 nav {
-	width: 100%;
 	background: $navbar-default-bg;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 body {
 	background: $body-bg-smoke;
+	#wrapper {
+		position: fixed;
+		top: 38px;
+		bottom: 18px;
+		left: 0;
+		right: 0;
+	}
 }
 
 footer {
 	width: 100%;
 	background: $navbar-default-bg;
+	color: #222;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	position: fixed;
+	div {
+		color: #FFF;
+	}
 }
 
 #notification {
@@ -43,6 +84,19 @@ footer {
 	bottom: 0;
 	right: 0;
 	left: 0;
+	.floatcontainer {
+		float: right;
+		width: 200px;
+		.header {
+			background: #454545;
+			padding: 10px 5px;
+		}
+		.content {
+			background: #FFF;
+			border: 1px solid #454545;
+			padding: 15px 10px;
+		}
+	}
 }
 
 #modal {
@@ -134,4 +188,48 @@ footer {
 }
 .vertaler {
 	background: $thema-vertaler;
+}
+.hidden {
+	display: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.form-layout {
+	input {
+		display: block;
+	}
+}
+
+#sidebarLeft {
+	float: left;
+	padding: 20px;
+	height: 100%;
+	background: #545454;
+	ul {
+		list-style: none;
+		li {
+			a {
+				color: #FFF;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+#sidebarRight {
+	float: left;
+	padding: 20px;
+	height: 100%;
+	background: #646464;
+	ul {
+		list-style: none;
+		li {
+			a {
+				color: #FFF;
+			}
+		}
+	}
 }

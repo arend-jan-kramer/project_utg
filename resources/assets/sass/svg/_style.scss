@@ -1,31 +1,27 @@
-svg {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	margin: auto;
+html,
+body,
+#content {
+	height: 100%;
+	width: 100%;
 }
 
-.square {
-	stroke-dasharray: 540;
-	stroke-dashoffset: -540;
-	animation: draw-square 3s infinite alternate linear;
-	transform-origin: 50% 50%;
-	stroke: red;
+// #content {
+// 	@include linear-gradient(blue 30vh, green 30vh);
+// }
+
+.animate {
+	animation: animatevlag 3s infinite normal linear;
+	// animation: animatevlag 1.5s infinite normal linear;
 }
 
-@keyframes draw-square {
+@keyframes animatevlag {
 	0% {
-		stroke-dashoffset: -540;
-		transform: rotate(0deg);
-	}
-	50% {
-		stroke: purple;
+		transform: translateX(0px);
 	}
 	100% {
-		stroke-dashoffset: 0;
-		transform: rotate(360deg);
-		stroke: blue;
+		transform: translateX(-192px);
 	}
+	// 100% {
+	// 	transform: translateX(0px);
+	// }
 }

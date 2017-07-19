@@ -54,3 +54,9 @@ $thema-financieel: rgb(250,100,0);
 $thema-verkoop: rgb(255,0,39);
 $thema-boekhouder: rgb(0, 160, 210);
 $thema-vertaler: rgb(78,72,144);
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}

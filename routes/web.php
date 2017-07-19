@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('register', 'userController@register');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,4 +24,8 @@ Route::get('image-svg', function () {
 
 Route::get('kleuren', function () {
     return view('kleuren');
+});
+
+Route::get('greensocks', function () {
+    return view('greensocks');
 });

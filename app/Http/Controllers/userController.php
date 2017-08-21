@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class userController extends Controller
 {
     //
-    function register() {
+    function registration() {
       return view('register.newUser');
     }
 

@@ -27,6 +27,8 @@
 	<div class="vertaler">
 		<h1>vertaler</h1>
 	</div>
+	<div class="fotograaf">
+		<h1>fotograaf</h1>
+	</div>
 </div>
 @endsection
-

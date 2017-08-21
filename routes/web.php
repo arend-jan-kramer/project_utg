@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('register', 'userController@register');
+Route::get('registration', 'userController@registration');
+Route::get('project', 'projectController@index');
 
 Route::get('/', function () {
     return view('welcome');

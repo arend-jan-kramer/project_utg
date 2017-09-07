@@ -1,8 +1,10 @@
 form {
   max-width: 520px;
+  margin: 0 auto;
   &.form-layout {
     input,
-    select {
+    select,
+    textarea {
       width: 100%;
       margin: 10px 0;
       font-size: 1.4em;

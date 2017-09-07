@@ -7,9 +7,9 @@
 
 // require('./components/animate');
 // require('./components/greensocks');
-// require('./components/bootstrap');
-// require('./components/greensocks');
-// require('./components/modal');
+require('./components/bootstrap');
+require('./components/greensocks');
+require('./components/modal');
 
 
 /**

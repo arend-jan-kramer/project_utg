@@ -11,22 +11,21 @@
 |
 */
 
-Route::get('registration', 'userController@registration');
 Route::get('project', 'projectController@index');
+Route::get('project/me', 'projectController@me')->middleware('auth');
+Route::get('project/new', 'projectController@new')->middleware('auth');
+Route::post('project/new', 'projectController@newproject')->middleware('auth');
+
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('image-svg', function () {
-    return view('svg');
-});
-
-
 Route::get('kleuren', function () {
     return view('kleuren');
 });
 
-Route::get('greensocks', function () {
-    return view('greensocks');
-});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

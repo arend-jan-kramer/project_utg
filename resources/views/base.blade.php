@@ -7,7 +7,6 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Up to go</title>
         <link href="{{mix('css/app.css')}}" type="text/css" rel="stylesheet">
-        @stack('scripts')
     </head>
     <body>
 
@@ -16,8 +15,9 @@
     <div id="wrapper">
 
         @include('include/sidebarLeft')
-
-        @yield('body')
+        <div class="container">
+          @yield('body')
+        </div>
 
         @include('include/sidebarRight')
 
@@ -29,9 +29,8 @@
 
     @include('include/modal')
 
-    <div id="app"></div>
-
     <!-- script -->
     <script src="{{mix('js/app.js')}}" type="text/javascript"></script>
+    @stack('customscripts')
     </body>
 </html>

@@ -1,4 +1,4 @@
-@extends('template/nosidebar')
+@extends('template/base')
 
 @section('body')
   {{ Form::open(["url" => "profile", "method" => "post", "class" => "form form-layout"]) }}

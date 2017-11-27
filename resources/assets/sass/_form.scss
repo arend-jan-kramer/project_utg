@@ -2,13 +2,42 @@ form {
   &.form {
     margin: 0 auto;
     &.form-layout {
-      input,
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="submit"],
       select,
       textarea {
         width: 100%;
         margin: 10px 0;
         font-size: 1.4em;
         text-align: left;
+      }
+      div.multiple_select {
+        // 
+        width: 100%;
+        margin: 10px 0;
+        font-size: 1.4em;
+        text-align: left;
+        position: relative;
+        ul {
+          // display: none;
+          position: absolute;
+          top: 50px;
+          left: 0px;
+          background: blue;
+          height: 100px;
+          overflow: auto;
+          width: 100%;
+          li {
+            label {
+              width: 100%;
+              span {
+                width: 100%;
+              }
+            }
+          }
+        }
       }
     }
   }

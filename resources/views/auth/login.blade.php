@@ -1,4 +1,4 @@
-@extends('template/nosidebar')
+@extends('template/base')
 
 @section('body')  
   {{ Form::open(['route' => 'login', "class" => "form form-layout"]) }}

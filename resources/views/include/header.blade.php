@@ -45,7 +45,7 @@
 					<li><a href="#">Financieel</a></li>
 				</ul>
 			</li>
-			<li class="{{ Request::path() == '/project/*' ? 'active' : '' }}">
+			<li class="{{ Request::path() == '/project/* ' ? 'active' : '' }}">
 				<a href="#">Project</a>
 				<ul class="submenu">
 					<li><a href="/project/me">Mijn projecten</a></li>

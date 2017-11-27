@@ -1,17 +1,24 @@
-
-.sidebar {
-    #wrapper {
-        width: 70%;
-    }
-}
 #wrapper {
     width: 100%;
     height: 100vh;
     overflow: auto;
-    position: relative;
-    
+    padding-top: 42px;
+    padding-bottom: 28px;
     .container {
         width: 100%;
+        padding: 10px 25px;
+        .page-title{
+            padding: 0 10%;
+            width:100%;
+            // background: #646464;
+            h1,h2,h3,h4,h5,h6{
+                background: #FFF;
+                padding: 0 20px;
+            }
+        }
+        .content {
+            width: 100%;
+        }
     }
     &::-webkit-scrollbar-track
     {
@@ -32,4 +39,74 @@
         box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #454545;
     }
+    // Begin projects
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+            &.me {
+                .project {
+                    width: 100%;
+                }
+            }
+        .project {
+            width: calc(100% / 3);
+            padding: 20px 20px 10px;
+            .projectHeader {
+                background: #000;
+                color: #FFF;
+                float: left;
+                width: 100%;
+                border: 2px solid #000;
+                .projectNumber {
+                    float: left;
+                    width: 50%;
+                    background: #000;
+                    padding: 20px;
+                }
+                .projectDate {
+                    float: right;
+                    width: 50%;
+                    text-align: right;
+                    background: #000;
+                    padding: 20px;
+                }
+            }
+            .projectContent {
+                padding: 20px;
+                margin-bottom: 20px;
+                float: left;
+                width: 100%;
+                border: 2px dashed #000;
+                border-top: 2px solid #000;
+                height: calc(100% - 62px);
+                position: relative;
+                > div {
+                    width: 100%;
+                }
+                // height: 215px;
+                .title { font-size: 24pt; }
+                .description { border: 1px dashed #000; }
+                .detail {
+                    font-weight: bold;
+                    &.line-throug {
+                        color: red;
+                        text-decoration: line-through;
+                    }
+                }
+                .newPrice {
+                    font-weight: bold;
+                    color: green;
+                }
+                .option {
+                    position: absolute;
+                    text-align: right;
+                    padding: 0 20px;
+                    left: 0;
+                    bottom: 20px;
+                }
+            }
+        }
+    } 
+    // Einde projects
 }

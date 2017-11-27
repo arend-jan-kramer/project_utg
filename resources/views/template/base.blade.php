@@ -8,36 +8,29 @@
         <title>Up to go @yield('page-title')</title>
         <link href="{{mix('css/app.css')}}" type="text/css" rel="stylesheet">
     </head>
-    <body class="thema{{ ( isset(Auth::user()->userType_id) ) ? '-'.Auth::user()->userType_id : '' }} sidebar">
-	
+    <body class="thema{{ ( isset(Auth::user()->userType_id) ) ? '-'.Auth::user()->userType_id : '' }}">
+
 		@include('include/header')
-    
-    @yield('sidebar_left')
 
     <div id="wrapper">
-
-
       <div class="container">
         <div class="page-title">
-          <h1>@yield('page-title1')</h1>
-          <h2>@yield('page-title2')</h2>
-          <h3>@yield('page-title3')</h3>
-          <h4>@yield('page-title4')</h4>
-          <h5>@yield('page-title5')</h5>
-          <h6>@yield('page-title6')</h6>
+                  <h1>@yield('page-title1')</h1>
+                  <h2>@yield('page-title2')</h2>
+                  <h3>@yield('page-title3')</h3>
+                  <h4>@yield('page-title4')</h4>
+                  <h5>@yield('page-title5')</h5>
+                  <h6>@yield('page-title6')</h6>
         </div>
         <div class="content">
           @yield('body')
         </div>
       </div>
-
-      @include('include/footer')
-
     </div>
+    
+    @include('include/footer')
 
-    @yield('sidebar_right')
-
-    @include('include/notification')
+  @include('include/notification')
 
   <div id="modal" class="modal hidden"></div>
 <!-- script -->

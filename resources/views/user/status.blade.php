@@ -1,4 +1,4 @@
-@extends('template/nosidebar')
+@extends('template/base')
 
 @section('body')
   <h1>Title</h1>

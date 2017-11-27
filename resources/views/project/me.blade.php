@@ -42,27 +42,3 @@
   @endforeach
 </div>
 @endsection
-
-@section('sidebar_left_title')
-  <h2>Projecten</h2>
-@endsection
-
-@section('sidebar_left')
-<div id="sidebar" class="left">
-    <ul class="sidebarMenu">
-      @foreach($projects as $project)
-        <li><a href="#">{{$project->title}}</a></li>
-      @endforeach
-  </ul>
-</div>
-@endsection
-
-@section('sidebar_right')
-<div id="sidebar" class="right">
-    <ul class="sidebarMenu">
-      @foreach($projects as $project)
-        {{$project->projectedited}}
-      @endforeach
-  </ul>
-</div>
-@endsection

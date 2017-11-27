@@ -1,4 +1,4 @@
-@extends('template/nosidebar')
+@extends('template/base')
 
 @section('body')
   <div class="projects"></div>
@@ -16,7 +16,7 @@
       $('.projects').html(response);
     });
     setTimeout(function() {
-      refresh();
+      // refresh();
     }, time(10));
   }
   refresh();

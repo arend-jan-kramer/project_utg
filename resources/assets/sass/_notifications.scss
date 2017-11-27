@@ -1,0 +1,19 @@
+#notification {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    .floatcontainer {
+        float: right;
+        width: 200px;
+        .header {
+            background: #454545;
+            padding: 10px 5px;
+        }
+        .content {
+            background: #FFF;
+            border: 1px solid #454545;
+            padding: 15px 10px;
+        }
+    }
+}

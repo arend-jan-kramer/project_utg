@@ -1,63 +1,21 @@
-
-// Body
-$body-bg: #f5f8fa;
-$body-bg-smoke: #e0e0e0;
-
-// modal
-$modal-bg: #454545;
-
-// Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
-
-// Brands
-$brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
-$brand-warning: #cbb956;
-$brand-danger: #bf5329;
-
-// Typography
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-$text-color: #636b6f;
-
-// Navbar
-$navbar-default-bg: #454545;
-
-// Footer
-$footer-bg: #6bc019;
+// Thema
+$thema-developer: aqua;
+$thema-textwrider: rgb(0,14,30);
+$thema-designer: rgb(255,0,190);
+$thema-lawyer: rgb(33,33,33);
+$thema-financial: rgb(0,143,0);
+$thema-marketing: rgb(255,0,39);
+$thema-accountant: rgb(0, 160, 210);
+$thema-translator: rgb(78,72,144);
+$thema-photographer: rgb(45,45,45);
 
 // Buttons
-$btn-default-color: $text-color;
+$btn-default-background: #444;
+$btn-accept-background: green;
+$btn-desline-background: red;
 
-// Inputs
-$input-border: lighten($text-color, 40%);
-$input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
-
-// Panels
-$panel-default-heading-bg: #fff;
-
-// thema
-$thema-developer: rgb(0,0,285);
-$thema-tekstschrijver: rgb(0,14,30);
-$thema-designer: rgb(255,0,190);
-$thema-klant-bezoeker: rgb(139,69,19);
-$thema-advocaat: rgb(33,33,33);
-$thema-financieel: rgb(250,100,0);
-$thema-verkoop: rgb(255,0,39);
-$thema-boekhouder: rgb(0, 160, 210);
-$thema-vertaler: rgb(78,72,144);
-$thema-fotograaf: rgb(45,45,45);
-
-@mixin linear-gradient($direction, $color-stops...) {
-  background: nth(nth($color-stops, 1), 1);
-  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-  background: linear-gradient($direction, $color-stops);
-}
+  
+$max-width: 1200px;
+$head-top: 38px;
+$donker-grijs: #454545;
+$licht-grijs: #656565;

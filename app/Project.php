@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\carbon;
 
 class Project extends Model
 {
@@ -23,4 +24,8 @@ class Project extends Model
     protected $hidden = [
         'author_id', 'user_id',
     ];
+
+    public function User() {
+      return $this->belongsTo(User::class);
+    }
 }

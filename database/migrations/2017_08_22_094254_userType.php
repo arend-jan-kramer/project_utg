@@ -27,7 +27,7 @@ class UserType extends Migration
         ],
         [
           'id' => '2',
-          'user_type' => 'guest',
+          'user_type' => 'employee',
           'created_at' => '2017-08-22 20:12:33'
         ],
         [

@@ -1,0 +1,70 @@
+.sidebar {
+    nav{
+        padding: 0 15%;
+    }
+}
+nav {
+    background: $donker-grijs;
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    ul.menu {
+        li {
+            float: left;
+            &:hover {
+                border: 2px solid $licht-grijs;
+            }
+            border: 2px solid $donker-grijs;
+            &.active {
+                a {
+                    background: $licht-grijs;
+                    color: $donker-grijs;
+                }
+            }
+            display: inline-block;
+            a {
+                padding: 10px 30px;
+                color: #FFF;
+                display: block;
+            }
+            &:hover {
+                ul.submenu {
+                    display: block;
+                    li {
+                        &:hover {
+                            a {
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+            ul.submenu {
+                display: none;
+                position: absolute;
+                background: rgba($licht-grijs, 0.6);
+                li {
+                    border: none;
+                    float: none;
+                    display: block;
+                    a {
+                        background: rgba($licht-grijs, 0.8);
+                    }
+                }
+                
+                // position: absolute;
+            }
+            &.right {
+                float: right;
+            }
+            &.no-hover {
+                border: 2px solid transparent;
+                a {
+                    cursor: default;
+
+                }
+            }
+        }
+    }
+}

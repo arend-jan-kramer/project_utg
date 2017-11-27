@@ -11,21 +11,27 @@
 |
 */
 
-Route::get('project', 'projectController@index');
-Route::get('project/me', 'projectController@me')->middleware('auth');
-Route::get('project/new', 'projectController@new')->middleware('auth');
-Route::post('project/new', 'projectController@newproject')->middleware('auth');
+Route::post("/profile", "userController@edit");
+Route::get("/profile/user", "userController@profile");
+Route::get("/profile/status", "userController@status");
+Route::get("/profile/mail", "userController@mail");
 
+// Ajax calls
+Route::get("/mail/{id}", "callsController@getMessageId");
+Route::get("/getproject", "callsController@getProjects");
+Route::get("/count", "callsController@countMessages");
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// GET
+Route::get("/", "homeController@index");
+Route::get("/project", "projectController@index");
+Route::get("/project/me", "projectController@me");
+Route::get("/project/new", "projectController@new");
+Route::get("/project/history", "projectController@history");
 
-Route::get('kleuren', function () {
-    return view('kleuren');
-});
-
+// POST
+Route::post("/project/new", "projectController@create");
+Route::post("/project/to-me", "projectController@update");
+Route::post("/project/{nr}/cancel", "projectController@cancel");
+Route::post("/project/{nr}/finish", "projectController@finish");
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');

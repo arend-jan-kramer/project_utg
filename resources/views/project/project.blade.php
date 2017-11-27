@@ -1,12 +1,12 @@
+{{-- @empty($project->user_id) --}}
 @foreach($projects as $project)
-  @empty($project->user_id) {{-- user id is not empty --}}
-    <div class="project">
+<div class="project">
       <div class="projectHeader">
         <div class="projectNumber">
-          {{ trans('translation.tr_000004', ['id' => $project->id]) }}
+          {{ trans('translation.tr_000004', ['id' => sprintf("%07s", $project->id)]) }}
         </div>
         <div class="projectDate">
-          {{ trans('translation.tr_000009', ['created_at' => $project->created_at]) }}
+          {{ trans('translation.tr_000009', ['created_at' => $project->created_at->format('d-m-Y H:i')]) }}
         </div>
       </div>
       <div class="projectContent">
@@ -24,12 +24,15 @@
             {{ trans('translation.tr_000010', ['new_price' => $project->new_price]) }}
           </div>
         @endisset
+        @if(!empty(Auth::user()->id))
           <div class="option">
-            <button class="btn-accept">Accept</button>
-            <button class="button-desline">Desline</button>
+            {{ Form::open(["url" => "project/to-me", "method" => "post"]) }}
+            {{ Form::input('text', 'id', $project->id, ["class" => "hidden"]) }}
+            {{ Form::submit("Accept job", ["class" => "btn accept"]) }}
+            {{ Form::close() }}
           </div>
-
+        @endif
       </div>
     </div>
-@endempty
+{{-- @endempty --}}
 @endforeach

@@ -1,0 +1,25 @@
+.btn {
+  border-radius: 5px;
+  color: #FFF;
+  padding: 3px 15px;
+  &.default {
+    background: $btn-default-background;
+    border-color: transparent;
+  }
+  &.accept {
+    background: $btn-accept-background;
+    border: solid 1px $btn-accept-background;
+    &:hover {
+      background: lighten($btn-accept-background, 3%);
+      border: 1px solid black;
+    }
+  }
+  &.desline {
+    background: $btn-desline-background;
+    border: solid 1px $btn-desline-background;
+    &:hover {
+      background: lighten($btn-desline-background, 3%);
+      border: 1px solid black;
+    }
+  }
+}

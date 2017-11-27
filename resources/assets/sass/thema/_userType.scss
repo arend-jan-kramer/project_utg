@@ -1,0 +1,37 @@
+$list: $thema-developer, $thema-textwrider, $thema-designer, $thema-lawyer, $thema-financial, $thema-marketing, $thema-accountant, $thema-translator, $thema-photographer;
+$xlists: length($list);
+
+@function get($number) {
+    @return nth($list, $number);
+}
+
+@for $i from 1 through $xlists {
+    $color: get($i);
+    .thema-#{$i} {
+        nav {
+            &.horizontal {
+                ul {
+                    &.menu {
+                        li {
+                            a {
+                                color: $color;
+                            }
+                            &.no-hover{
+                                a {
+                                    &:hover {
+                                        color: $color;
+                                        cursor: default;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                border-bottom: 2px solid $color;
+            }
+        }
+        #sidebar {
+            // @include linear-gradient(180deg, $donker-grijs 0, $donker-grijs 38px, $color 38px, $color 40px, $licht-grijs 40px, $licht-grijs);
+        }
+    }
+}
